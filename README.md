@@ -50,21 +50,22 @@ backend/src/main/java/com/yujin/fullstackboard/
 
 ## 구현 현황
 
-- [x] Spring Boot 프로젝트 구성
-- [x] MySQL 및 JPA 연결
-- [x] 회원 엔티티와 권한 Enum 구성
-- [x] 이메일·닉네임 중복 검사
-- [x] BCrypt 비밀번호 암호화
-- [x] 회원가입 API
-- [ ] 로그인 API
-- [ ] JWT 인증 및 인가
-- [ ] 게시글 CRUD
-- [ ] 작성자 권한 검사
-- [ ] 공통 예외 처리
-- [ ] 테스트 코드
-- [ ] Next.js 프론트엔드
-- [ ] Docker Compose
-- [ ] AWS EC2 배포
+- [x] [백엔드 기반 및 회원가입 API 구축](https://github.com/LeeEugene1/fullstack-board/issues/1)
+  - Spring Boot 프로젝트 구성
+  - MySQL 및 JPA 연결
+  - 회원 엔티티와 권한 Enum 구성
+  - 이메일·닉네임 중복 검사
+  - BCrypt 비밀번호 암호화
+  - 회원가입 API
+- [ ] [로그인 API](https://github.com/LeeEugene1/fullstack-board/issues/2)
+- [ ] [JWT 인증 및 인가](https://github.com/LeeEugene1/fullstack-board/issues/3)
+- [ ] [게시글 CRUD](https://github.com/LeeEugene1/fullstack-board/issues/4)
+- [ ] [게시글 작성자 권한 검사](https://github.com/LeeEugene1/fullstack-board/issues/5)
+- [ ] [공통 예외 처리](https://github.com/LeeEugene1/fullstack-board/issues/6)
+- [ ] [백엔드 테스트 코드](https://github.com/LeeEugene1/fullstack-board/issues/7)
+- [ ] [Next.js 프론트엔드](https://github.com/LeeEugene1/fullstack-board/issues/8)
+- [ ] [Docker Compose](https://github.com/LeeEugene1/fullstack-board/issues/9)
+- [ ] [AWS EC2 배포](https://github.com/LeeEugene1/fullstack-board/issues/10)
 
 ## 로컬 실행 방법
 
