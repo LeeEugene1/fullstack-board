@@ -114,33 +114,9 @@ cd backend
 
 기본 실행 주소는 `http://localhost:8080`입니다.
 
-## API
+## API 문서
 
-### 회원가입
-
-```http
-POST /api/auth/signup
-Content-Type: application/json
-```
-
-요청 예시:
-
-```json
-{
-  "email": "test@example.com",
-  "password": "password123!",
-  "nickname": "테스터"
-}
-```
-
-성공 응답 예시 (`201 Created`):
-
-```json
-{
-  "memberId": 1,
-  "message": "회원가입에 성공했습니다."
-}
-```
+요청·응답 형식과 상태 코드는 [API 문서](docs/API.md)에서 관리합니다.
 
 ## 보안 원칙
 
