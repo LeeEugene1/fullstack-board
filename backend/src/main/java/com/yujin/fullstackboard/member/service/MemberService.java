@@ -1,7 +1,10 @@
 package com.yujin.fullstackboard.member.service;
 
+import com.yujin.fullstackboard.member.dto.LoginRequest;
+import com.yujin.fullstackboard.member.dto.LoginResponse;
 import com.yujin.fullstackboard.member.dto.SignupRequest;
 import com.yujin.fullstackboard.member.entity.Member;
+import com.yujin.fullstackboard.member.exception.InvalidCredentialsException;
 import com.yujin.fullstackboard.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -45,5 +48,31 @@ public class MemberService {
         Member savedMember = memberRepository.save(member);
 
         return savedMember.getId();
+    }
+
+    public LoginResponse login(LoginRequest request) {
+        //1. 이메일의 앞뒤 공백 제거 및 소문자 변환
+        String email = request.email().trim().toLowerCase(Locale.ROOT);
+
+        //2. 이메일로 Member 조회
+        Member member = memberRepository.findByEmail(email)
+                .orElseThrow(InvalidCredentialsException::new);
+
+        //비밀번호 검사
+        boolean passwordMatches = passwordEncoder.matches(
+                request.password(),
+                member.getPassword()
+        );
+
+        if (!passwordMatches) {
+            throw new InvalidCredentialsException();
+        }
+
+        //3. memberId, email, nickname을 담은 LoginResponse 객체 반환
+        return new LoginResponse(
+                member.getId(),
+                member.getEmail(),
+                member.getNickname()
+        );
     }
 }

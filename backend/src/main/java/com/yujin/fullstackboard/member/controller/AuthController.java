@@ -1,5 +1,7 @@
 package com.yujin.fullstackboard.member.controller;
 
+import com.yujin.fullstackboard.member.dto.LoginRequest;
+import com.yujin.fullstackboard.member.dto.LoginResponse;
 import com.yujin.fullstackboard.member.dto.SignupRequest;
 import com.yujin.fullstackboard.member.dto.SignupResponse;
 import com.yujin.fullstackboard.member.service.MemberService;
@@ -37,5 +39,14 @@ public class AuthController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(response);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<LoginResponse> login(
+            @Valid @RequestBody LoginRequest request
+    ) {
+        LoginResponse response = memberService.login(request);
+
+        return ResponseEntity.ok(response);
     }
 }
