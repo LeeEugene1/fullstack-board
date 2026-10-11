@@ -57,7 +57,7 @@ backend/src/main/java/com/yujin/fullstackboard/
   - 이메일·닉네임 중복 검사
   - BCrypt 비밀번호 암호화
   - 회원가입 API
-- [ ] [로그인 API](https://github.com/LeeEugene1/fullstack-board/issues/2)
+- [x] [로그인 API](https://github.com/LeeEugene1/fullstack-board/issues/2)
 - [ ] [JWT 인증 및 인가](https://github.com/LeeEugene1/fullstack-board/issues/3)
 - [ ] [게시글 CRUD](https://github.com/LeeEugene1/fullstack-board/issues/4)
 - [ ] [게시글 작성자 권한 검사](https://github.com/LeeEugene1/fullstack-board/issues/5)
